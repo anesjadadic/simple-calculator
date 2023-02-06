@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Calculator</h1>
+    </div>
+    <div class="box">
+        <h2>
+            <input type="text" id="num1">
+            <br>
+            <div class="radio-toolbar">
+                <input type="radio" id="addition" name="method" value="add">
+                <label for="addition">+</label>
+                <input type="radio" id="subtraction" name="method" value="sub">
+                <label for="subtraction">-</label>
+                <input type="radio" id="multiplication"name="method" value="mul">
+                <label for="multiplication">x</label>
+                <input type="radio" id="division" name="method" value="div">
+                <label for="division">/</label>
+            </div>
+            <input type="text" id="num2"><br>
+            <button onclick="setMethod()" id="submit">Submit</button>
+        </h2>
+    </div>
+    <div class="box">
+        <h1 id="demo">Result</h1>
+    </div>
+
+    <script>
+        function setMethod() {
+            let method = document.getElementsByName('method');
+            for(i = 0; i < method.length; i++) {
+                if(method[i].checked)
+                    printAnswer(method[i].value);
+            }
+        }
+
+        function printAnswer(method) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            if(method == 'add'){
+                let ans = num1 + num2;
+                document.getElementById("demo").innerHTML = num1  + " + " + num2 + " = "  + ans;
+            }
+            else if(method == 'sub'){
+                let ans = num1 - num2;
+                document.getElementById("demo").innerHTML = num1  + " - " + num2 + " = "  + ans;
+            }
+            else if(method == 'mul'){
+                let ans = num1 * num2;
+                document.getElementById("demo").innerHTML = num1  + " x " + num2 + " = "  + ans;
+            }
+            else if(method == 'div'){
+                let ans = num1 / num2;
+                document.getElementById("demo").innerHTML = num1  + " / " + num2 + " = "  + ans;
+            }
+        }
+    </script>
+</body>
+</html>

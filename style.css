@@ -1,0 +1,84 @@
+h1 {
+    text-align: center;
+    color:rgb(59, 68, 68);
+}
+
+h2 {
+    text-align: center;
+    color:rgb(59, 68, 68);
+}
+
+.box {
+    border-style:ridge;
+    border-radius: 20px;
+    border-color: lightslategray;
+    background-color:floralwhite;
+    margin: 0px 350px 20px 350px
+}
+
+input[type=text]{
+    text-align: center;
+    background-color: rgb(241, 235, 228);
+    border-radius: 20px;
+    border-style:solid;
+    font-size: large;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color:rgb(226, 220, 213);
+    padding: 12px 25px;
+    font-family: sans-serif, Arial;
+    font-size: large;
+    border: 2px solid #6e6e6e;
+    border-radius: 8px;
+}
+
+.radio-toolbar input[type="radio"]:hover + label {
+    background-color:rgb(179, 174, 169);
+    border-color: #6e6e6e;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:rgb(180, 207, 224);
+    border-color: rgb(113, 140, 158);
+}
+
+.radio-toolbar input[type="radio"]:checked:hover + label {
+    background-color:rgb(133, 165, 187);
+    border-color: rgb(113, 140, 158);
+}
+
+button {
+    background-color:rgb(226, 220, 213);
+    font-size: large;
+    border-style:solid;
+    padding: 6px 16px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color:rgb(180, 175, 169);
+    font-size: large;
+    border-style:solid;
+    padding: 6px 16px;
+}
+
+button:active {
+    background-color:rgb(194, 189, 183);
+    font-size: large;
+    border-style:solid;
+    padding: 6px 16px;
+}
+
+body {
+    background-color:lightsteelblue;
+}
